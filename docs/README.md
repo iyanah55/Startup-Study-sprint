@@ -29,7 +29,7 @@ python -m unittest
 
 ## Team
 
-<!-- Add yourself here on your Git lesson: - Your Name (role) -->
+-iyana (building Study sprint)
 
 - (your squad will add themselves here)
 
