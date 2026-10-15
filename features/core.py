@@ -22,6 +22,7 @@ def run_quiz(cards, ask=input, show=print):
 
 
 def add_card(data, question, answer, category="general"):
+    ""Add different cards containing data, question, answer, category.""
     new_id = max((c["id"] for c in data["cards"]), default=0) + 1
     card = {"id": new_id, "question": question, "answer": answer, "category": category}
     data["cards"].append(card)
@@ -53,3 +54,11 @@ def percent_correct(score, total):
     if total == 0:
         return 0
     return round(100 * score / total)
+def review_missed(cards, results):
+    missed=[]
+    i=0
+    for card in cards:
+        if results[i] == False:
+            missed = missed + [card]
+        i = i + 1
+    return missed
