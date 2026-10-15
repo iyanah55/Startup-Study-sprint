@@ -22,6 +22,7 @@ def run_quiz(cards, ask=input, show=print):
 
 
 def add_card(data, question, answer, category="general"):
+    ""Add different cards containing data, question, answer, category.""
     new_id = max((c["id"] for c in data["cards"]), default=0) + 1
     card = {"id": new_id, "question": question, "answer": answer, "category": category}
     data["cards"].append(card)
