@@ -30,7 +30,9 @@ def add_card(data, question, answer, category="general"):
 
 def list_cards(cards, show=print):
     for card in cards:
+        print(card)
         show(str(card["id"]) + ". " + card["question"])
+    return card
 
 
 def cards_by_category(cards, category):
